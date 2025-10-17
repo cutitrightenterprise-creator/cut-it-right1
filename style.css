@@ -1,22 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: lime;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darkgreen;
 }
 
 /* Header */
 header {
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-container {
@@ -26,9 +36,9 @@ header {
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: #333;
+    color: #343a40;
 }
 
 nav ul {
@@ -39,16 +49,18 @@ nav ul {
 }
 
 nav li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav a {
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #343a40;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbarber%2F&psig=AOvVaw0f-g6b_g6b_g6b_g6b_g6b_g6b&ust=1697316000000000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPCCh_vB-oEDFQAAAAAdAAAAABAD');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Two-stroke_engine_schematic.JPG');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -61,29 +73,32 @@ nav a {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero p {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .hero .logo i {
-    font-size: 3rem;
+    font-size: 4rem;
     color: lime;
     margin-bottom: 20px;
 }
 
 /* Sections */
 section {
-    padding: 20px;
+    padding: 60px 40px;
 }
 
 section h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-weight: 600;
 }
 
 /* Cards */
@@ -94,7 +109,7 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .service-card,
@@ -102,12 +117,12 @@ section h2 {
 .brand-item,
 .more-service-item {
     background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
+    padding: 40px 30px;
+    border-radius: 15px;
     text-align: center;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover,
@@ -115,12 +130,13 @@ section h2 {
 .brand-item:hover,
 .more-service-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .service-card i {
-    font-size: 3rem;
-    color: #3498db;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    color: lime;
+    margin-bottom: 25px;
 }
 
 .service-card h3,
@@ -129,293 +145,234 @@ section h2 {
 .more-service-item h3 {
     font-size: 1.5rem;
     margin: 0;
+    font-weight: 600;
 }
 
 .item-footer {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 10px;
-}
-
-/* Machine Details */
-#machine-details {
-    padding: 60px 20px;
-}
-
-.machine-details-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.machine-image {
-    flex-basis: 50%;
-}
-
-.machine-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.machine-description {
-    flex-basis: 50%;
-}
-
-.machine-description h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.machine-description p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.machine-description .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2ecc71;
-    margin-top: 20px;
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 15px;
 }
 
 /* Buttons */
 .btn {
-    background-color: #3498db;
+    background-color: lime;
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: darkgreen;
+    transform: translateY(-3px);
 }
 
 .btn-secondary {
-    background-color: #2ecc71;
+    background-color: #6c757d;
 }
 
 .btn-secondary:hover {
-    background-color: #27ae60;
+    background-color: #5a6268;
 }
 
-.btn-danger {
-    background-color: #e74c3c;
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    align-items: start;
 }
 
-.btn-danger:hover {
-    background-color: #c0392b;
+.contact-info h3,
+.contact-form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
-/* Cart */
-.cart-count {
-    background-color: #e74c3c;
-    color: #fff;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: relative;
-    top: -10px;
-    right: 5px;
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
-.accessories-list {
-    max-width: 800px;
-    margin: 0 auto;
+.form-label {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
 }
 
-.accessory-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
-.accessory-name {
-    font-size: 1.5rem;
+/* Spares Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
 }
 
-.accessory-price {
-    font-size: 1.5rem;
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr td:nth-child(4) {
+    color: red;
     font-weight: bold;
-    color: #2ecc71;
+}
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+#searchButton {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: lime;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+#searchButton:hover {
+    background-color: darkgreen;
+}
+
+.huge-price {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.labour-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.labour-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.labour-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.labour-card .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: lime;
+}
+
+#searchResults {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#searchResults a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+#searchResults a:hover {
+    background-color: #e0e0e0;
 }
 
 .pricing-container {
     display: flex;
     justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
 }
 
 .pricing-card {
     background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     text-align: center;
     width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .pricing-title {
     font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
 .pricing-price {
     font-size: 3rem;
     font-weight: bold;
-    color: #2ecc71;
+    color: lime;
     margin-bottom: 10px;
 }
 
 .pricing-per {
-    font-size: 1.2rem;
-    color: #777;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.disclaimer {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 0.9rem;
+    color: #6c757d;
 }
 
 .ask-more-container {
     text-align: center;
     margin-top: 40px;
-}
-
-.service-description {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.service-description p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.delivery-fees-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.fee-card {
-    background-color: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.fee-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.fee-card .price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2ecc71;
-    margin-bottom: 10px;
-}
-
-.customer-form-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.customer-form-container h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.customer-form-container label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.customer-form-container input,
-.customer-form-container textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1.1rem;
-}
-
-.form-label {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.banking-details-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.banking-details p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.shipping-instruction {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.payment-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.payment-summary-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.payment-summary p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.payment-button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.contact-info h3,
-.contact-form-container h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
 }
