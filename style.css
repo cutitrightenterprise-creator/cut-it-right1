@@ -1,378 +1,413 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
-}
-
-a {
-    text-decoration: none;
-    color: lime;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: darkgreen;
-}
-
-/* Header */
-header {
-    background-color: #fff;
-    padding: 20px 40px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #343a40;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin-left: 30px;
-}
-
-nav a {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #343a40;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Two-stroke_engine_schematic.JPG');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-}
-
-.hero h1 {
-    font-size: 4.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-.hero .logo i {
-    font-size: 4rem;
-    color: lime;
-    margin-bottom: 20px;
-}
-
-/* Sections */
-section {
-    padding: 60px 40px;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
-    font-weight: 600;
-}
-
-/* Cards */
-.services-container,
-.sales-container,
-.brand-container,
-.more-services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.service-card,
-.sales-item,
-.brand-item,
-.more-service-item {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    width: 280px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover,
-.sales-item:hover,
-.brand-item:hover,
-.more-service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-.service-card i {
-    font-size: 3.5rem;
-    color: lime;
-    margin-bottom: 25px;
-}
-
-.service-card h3,
-.sales-item h3,
-.brand-item h3,
-.more-service-item h3 {
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 600;
-}
-
-.item-footer {
-    font-size: 1rem;
-    color: #6c757d;
-    margin-top: 15px;
-}
-
-/* Buttons */
-.btn {
-    background-color: lime;
-    color: #fff;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: darkgreen;
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-}
-
-/* Contact Section */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 60px;
-    align-items: start;
-}
-
-.contact-info h3,
-.contact-form-container h3 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.form-label {
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 8px;
-    display: block;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-/* Spares Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-}
-
-th, td {
-    border: 1px solid #dee2e6;
-    padding: 12px 15px;
-    text-align: left;
-}
-
-th {
-    background-color: #e9ecef;
-    font-weight: 600;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-
-.table tbody tr td:nth-child(4) {
-    color: red;
-    font-weight: bold;
-}
-
-.search-container {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-#searchInput {
-    width: 50%;
-    padding: 15px;
-    font-size: 1.2rem;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-}
-
-#searchButton {
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    border: 1px solid #ccc;
-    border-left: none;
-    background-color: lime;
-    color: white;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-}
-
-#searchButton:hover {
-    background-color: darkgreen;
-}
-
-.huge-price {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.labour-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.labour-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.labour-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.labour-card .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: lime;
-}
-
-#searchResults {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-
-#searchResults a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-}
-
-#searchResults a:hover {
-    background-color: #e0e0e0;
-}
-
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.pricing-card {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-.pricing-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.pricing-price {
-    font-size: 3rem;
-    font-weight: bold;
-    color: lime;
-    margin-bottom: 10px;
-}
-
-.pricing-per {
-    font-size: 1rem;
-    color: #6c757d;
-}
-
-.disclaimer {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 0.9rem;
-    color: #6c757d;
-}
-
-.ask-more-container {
-    text-align: center;
-    margin-top: 40px;
-}
+  1 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+     2 
+     3 /* General Styles */
+     4 body {
+     5     font-family: 'Poppins', sans-serif;
+     6     margin: 0;
+     7     padding: 0;
+     8     background-color: #f8f9fa;
+     9     color: #343a40;
+    10 }
+    11 
+    12 a {
+    13     text-decoration: none;
+    14     color: lime;
+    15     transition: color 0.3s ease;
+    16 }
+    17 
+    18 a:hover {
+    19     color: darkgreen;
+    20 }
+    21 
+    22 /* Header */
+    23 header {
+    24     background-color: #fff;
+    25     padding: 20px 40px;
+    26     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    27     position: sticky;
+    28     top: 0;
+    29     z-index: 1000;
+    30 }
+    31 
+    32 .header-container {
+    33     display: flex;
+    34     justify-content: space-between;
+    35     align-items: center;
+    36 }
+    37 
+    38 .logo-text {
+    39     font-size: 1.8rem;
+    40     font-weight: 700;
+    41     color: #343a40;
+    42 }
+    43 
+    44 nav ul {
+    45     list-style: none;
+    46     margin: 0;
+    47     padding: 0;
+    48     display: flex;
+    49 }
+    50 
+    51 nav li {
+    52     margin-left: 30px;
+    53 }
+    54 
+    55 nav a {
+    56     font-weight: 500;
+    57     font-size: 1rem;
+    58     color: #343a40;
+    59 }
+    60 
+    61 /* Hero Section */
+    62 .hero {
+    63     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Two-stroke_engine_schematic.JPG'
+    64     background-size: cover;
+    65     background-position: center;
+    66     height: 80vh;
+    67     display: flex;
+    68     flex-direction: column;
+    69     justify-content: center;
+    70     align-items: center;
+    71     text-align: center;
+    72     color: #fff;
+    73 }
+    74 
+    75 .hero h1 {
+    76     font-size: 4.5rem;
+    77     margin-bottom: 20px;
+    78     font-weight: 700;
+    79 }
+    80 
+    81 .hero p {
+    82     font-size: 1.5rem;
+    83     font-weight: 300;
+    84 }
+    85 
+    86 .hero .logo i {
+    87     font-size: 4rem;
+    88     color: lime;
+    89     margin-bottom: 20px;
+    90 }
+    91 
+    92 /* Sections */
+    93 section {
+    94     padding: 60px 40px;
+    95 }
+    96 
+    97 section h2 {
+    98     text-align: center;
+    99     font-size: 3rem;
+   100     margin-bottom: 60px;
+   101     font-weight: 600;
+   102 }
+   103 
+   104 /* Cards */
+   105 .services-container,
+   106 .sales-container,
+   107 .brand-container,
+   108 .more-services-container {
+   109     display: flex;
+   110     flex-wrap: wrap;
+   111     justify-content: center;
+   112     gap: 30px;
+   113 }
+   114 
+   115 .service-card,
+   116 .sales-item,
+   117 .brand-item,
+   118 .more-service-item {
+   119     background-color: #fff;
+   120     padding: 40px 30px;
+   121     border-radius: 15px;
+   122     text-align: center;
+   123     width: 280px;
+   124     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+   125     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   126 }
+   127 
+   128 .service-card:hover,
+   129 .sales-item:hover,
+   130 .brand-item:hover,
+   131 .more-service-item:hover {
+   132     transform: translateY(-10px);
+   133     box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+   134 }
+   135 
+   136 .service-card i {
+   137     font-size: 3.5rem;
+   138     color: lime;
+   139     margin-bottom: 25px;
+   140 }
+   141 
+   142 .service-card h3,
+   143 .sales-item h3,
+   144 .brand-item h3,
+   145 .more-service-item h3 {
+   146     font-size: 1.5rem;
+   147     margin: 0;
+   148     font-weight: 600;
+   149 }
+   150 
+   151 .item-footer {
+   152     font-size: 1rem;
+   153     color: #6c757d;
+   154     margin-top: 15px;
+   155 }
+   156 
+   157 /* Buttons */
+   158 .btn {
+   159     background-color: lime;
+   160     color: #fff;
+   161     padding: 15px 35px;
+   162     border-radius: 50px;
+   163     font-weight: 600;
+   164     transition: background-color 0.3s ease, transform 0.3s ease;
+   165     display: inline-block;
+   166     border: none;
+   167     cursor: pointer;
+   168 }
+   169 
+   170 .btn:hover {
+   171     background-color: darkgreen;
+   172     transform: translateY(-3px);
+   173 }
+   174 
+   175 .btn-secondary {
+   176     background-color: #6c757d;
+   177 }
+   178 
+   179 .btn-secondary:hover {
+   180     background-color: #5a6268;
+   181 }
+   182 
+   183 /* Contact Section */
+   184 .contact-container {
+   185     display: grid;
+   186     grid-template-columns: 1fr 1fr;
+   187     gap: 60px;
+   188     margin-bottom: 60px;
+   189     align-items: start;
+   190 }
+   191 
+   192 .contact-info h3,
+   193 .contact-form-container h3 {
+   194     font-size: 1.8rem;
+   195     margin-bottom: 25px;
+   196     font-weight: 600;
+   197 }
+   198 
+   199 .contact-info p {
+   200     font-size: 1.1rem;
+   201     line-height: 1.8;
+   202 }
+   203 
+   204 .form-label {
+   205     font-weight: 500;
+   206     font-size: 1rem;
+   207     margin-bottom: 8px;
+   208     display: block;
+   209 }
+   210 
+   211 input[type="text"],
+   212 input[type="email"],
+   213 textarea {
+   214     width: 100%;
+   215     padding: 15px;
+   216     border: 1px solid #ced4da;
+   217     border-radius: 8px;
+   218     font-size: 1rem;
+   219     margin-bottom: 20px;
+   220 }
+   221 
+   222 /* Spares Table */
+   223 table {
+   224     width: 100%;
+   225     border-collapse: collapse;
+   226     margin-top: 40px;
+   227 }
+   228 
+   229 th, td {
+   230     border: 1px solid #dee2e6;
+   231     padding: 12px 15px;
+   232     text-align: left;
+   233 }
+   234 
+   235 th {
+   236     background-color: #e9ecef;
+   237     font-weight: 600;
+   238 }
+   239 
+   240 tbody tr:nth-child(odd) {
+   241     background-color: #f8f9fa;
+   242 }
+   243 
+   244 .table tbody tr td:nth-child(4) {
+   245     color: red;
+   246     font-weight: bold;
+   247 }
+   248 
+   249 .search-container {
+   250     margin: 20px 0;
+   251     display: flex;
+   252     justify-content: center;
+   253 }
+   254 
+   255 #searchInput {
+   256     width: 50%;
+   257     padding: 15px;
+   258     font-size: 1.2rem;
+   259     border: 1px solid #ccc;
+   260     border-radius: 5px 0 0 5px;
+   261 }
+   262 
+   263 #searchButton {
+   264     padding: 15px 20px;
+   265     font-size: 1.2rem;
+   266     border: 1px solid #ccc;
+   267     border-left: none;
+   268     background-color: lime;
+   269     color: white;
+   270     cursor: pointer;
+   271     border-radius: 0 5px 5px 0;
+   272 }
+   273 
+   274 #searchButton:hover {
+   275     background-color: darkgreen;
+   276 }
+   277 
+   278 .huge-price {
+   279     font-size: 3rem;
+   280     font-weight: bold;
+   281 }
+   282 
+   283 .labour-cards-container {
+   284     display: grid;
+   285     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   286     gap: 20px;
+   287 }
+   288 
+   289 .labour-card {
+   290     background-color: #fff;
+   291     padding: 20px;
+   292     border-radius: 10px;
+   293     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   294     text-align: center;
+   295 }
+   296 
+   297 .labour-card h3 {
+   298     font-size: 1.2rem;
+   299     margin-bottom: 15px;
+   300 }
+   301 
+   302 .labour-card .price {
+   303     font-size: 2.5rem;
+   304     font-weight: bold;
+   305     color: lime;
+   306 }
+   307 
+   308 #searchResults {
+   309     margin-top: 20px;
+   310     padding: 20px;
+   311     background-color: #f0f0f0;
+   312     border-radius: 5px;
+   313 }
+   314 
+   315 #searchResults a {
+   316     display: block;
+   317     padding: 10px;
+   318     color: #333;
+   319     text-decoration: none;
+   320     border-bottom: 1px solid #ccc;
+   321 }
+   322 
+   323 #searchResults a:hover {
+   324     background-color: #e0e0e0;
+   325 }
+   326 
+   327 .pricing-container {
+   328     display: flex;
+   329     justify-content: center;
+   330     gap: 30px;
+   331     flex-wrap: wrap;
+   332 }
+   333 
+   334 .pricing-card {
+   335     background-color: #fff;
+   336     padding: 40px;
+   337     border-radius: 15px;
+   338     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+   339     text-align: center;
+   340     width: 300px;
+   341     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   342 }
+   343 
+   344 .pricing-card:hover {
+   345     transform: translateY(-10px);
+   346     box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+   347 }
+   348 
+   349 .pricing-title {
+   350     font-size: 1.5rem;
+   351     font-weight: 600;
+   352     margin-bottom: 20px;
+   353 }
+   354 
+   355 .pricing-price {
+   356     font-size: 3rem;
+   357     font-weight: bold;
+   358     color: lime;
+   359     margin-bottom: 10px;
+   360 }
+   361 
+   362 .pricing-per {
+   363     font-size: 1rem;
+   364     color: #6c757d;
+   365 }
+   366 
+   367 .disclaimer {
+   368     text-align: center;
+   369     max-width: 800px;
+   370     margin: 0 auto 40px;
+   371     font-size: 0.9rem;
+   372     color: #6c757d;
+   373 }
+   374 
+   375 .ask-more-container {
+   376     text-align: center;
+   377     margin-top: 40px;
+   378 }
+   379 
+   380 /* Search Bar in Nav */
+   381 .search-form {
+   382     display: flex;
+   383     align-items: center;
+   384 }
+   385 
+   386 .search-form input[type="text"] {
+   387     border: 1px solid #ccc;
+   388     border-radius: 20px 0 0 20px;
+   389     padding: 8px 15px;
+   390     font-size: 0.9rem;
+   391     width: 200px;
+   392     transition: width 0.3s ease;
+   393 }
+   394 
+   395 .search-form input[type="text"]:focus {
+   396     width: 250px;
+   397     outline: none;
+   398     border-color: lime;
+   399 }
+   400 
+   401 .search-form button {
+   402     background: lime;
+   403     border: none;
+   404     padding: 8px 15px;
+   405     border-radius: 0 20px 20px 0;
+   406     cursor: pointer;
+   407     color: white;
+   408     font-size: 0.9rem;
+   409 }
+   410 
+   411 .search-form button:hover {
+   412     background: darkgreen;
+   413 }
