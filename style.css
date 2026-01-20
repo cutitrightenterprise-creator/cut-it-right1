@@ -376,38 +376,3 @@
    376     text-align: center;
    377     margin-top: 40px;
    378 }
-   379 
-   380 /* Search Bar in Nav */
-   381 .search-form {
-   382     display: flex;
-   383     align-items: center;
-   384 }
-   385 
-   386 .search-form input[type="text"] {
-   387     border: 1px solid #ccc;
-   388     border-radius: 20px 0 0 20px;
-   389     padding: 8px 15px;
-   390     font-size: 0.9rem;
-   391     width: 200px;
-   392     transition: width 0.3s ease;
-   393 }
-   394 
-   395 .search-form input[type="text"]:focus {
-   396     width: 250px;
-   397     outline: none;
-   398     border-color: lime;
-   399 }
-   400 
-   401 .search-form button {
-   402     background: lime;
-   403     border: none;
-   404     padding: 8px 15px;
-   405     border-radius: 0 20px 20px 0;
-   406     cursor: pointer;
-   407     color: white;
-   408     font-size: 0.9rem;
-   409 }
-   410 
-   411 .search-form button:hover {
-   412     background: darkgreen;
-   413 }
